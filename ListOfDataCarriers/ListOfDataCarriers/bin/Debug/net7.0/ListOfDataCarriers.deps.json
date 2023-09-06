@@ -1,0 +1,81 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ListOfDataCarriers/1.0.0": {
+        "dependencies": {
+          "ILogs": "1.0.0.0",
+          "ISerializers": "1.0.0.0",
+          "PriceList": "1.0.0.0",
+          "Storages": "1.0.0.0"
+        },
+        "runtime": {
+          "ListOfDataCarriers.dll": {}
+        }
+      },
+      "ILogs/1.0.0.0": {
+        "runtime": {
+          "ILogs.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ISerializers/1.0.0.0": {
+        "runtime": {
+          "ISerializers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PriceList/1.0.0.0": {
+        "runtime": {
+          "PriceList.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Storages/1.0.0.0": {
+        "runtime": {
+          "Storages.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ListOfDataCarriers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ILogs/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ISerializers/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PriceList/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Storages/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

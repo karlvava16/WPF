@@ -1,0 +1,5 @@
+C:\Step\WPF\ListOfDataCarriers\Storage\obj\Debug\net7.0\Storage.csproj.AssemblyReference.cache
+C:\Step\WPF\ListOfDataCarriers\Storage\obj\Debug\net7.0\Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\ListOfDataCarriers\Storage\obj\Debug\net7.0\Storage.AssemblyInfoInputs.cache
+C:\Step\WPF\ListOfDataCarriers\Storage\obj\Debug\net7.0\Storage.AssemblyInfo.cs
+C:\Step\WPF\ListOfDataCarriers\Storage\obj\Debug\net7.0\Storage.csproj.CoreCompileInputs.cache

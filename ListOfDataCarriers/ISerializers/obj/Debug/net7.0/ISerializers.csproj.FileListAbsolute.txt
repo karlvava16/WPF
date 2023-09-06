@@ -1,0 +1,17 @@
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.csproj.AssemblyReference.cache
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.AssemblyInfoInputs.cache
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.AssemblyInfo.cs
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.csproj.CoreCompileInputs.cache
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\ISerializers.deps.json
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\ISerializers.dll
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\ISerializers.pdb
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\Storages.dll
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\ILogs.dll
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\Storages.pdb
+C:\Step\WPF\ListOfDataCarriers\ISerializers\bin\Debug\net7.0\ILogs.pdb
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.csproj.CopyComplete
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.dll
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\refint\ISerializers.dll
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ISerializers.pdb
+C:\Step\WPF\ListOfDataCarriers\ISerializers\obj\Debug\net7.0\ref\ISerializers.dll

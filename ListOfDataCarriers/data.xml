@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfStorageDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StorageDevice xsi:type="Flash">
+    <Manufacturer>789</Manufacturer>
+    <Model>789</Model>
+    <Appellation>789</Appellation>
+    <Capacity>789</Capacity>
+    <Amount>789</Amount>
+    <USBSpeed>789</USBSpeed>
+  </StorageDevice>
+  <StorageDevice xsi:type="HDD">
+    <Manufacturer>123</Manufacturer>
+    <Model>123</Model>
+    <Appellation>123</Appellation>
+    <Capacity>123</Capacity>
+    <Amount>123</Amount>
+    <DiskSpeed>123</DiskSpeed>
+  </StorageDevice>
+  <StorageDevice xsi:type="DVD">
+    <Manufacturer>456</Manufacturer>
+    <Model>456</Model>
+    <Appellation>456</Appellation>
+    <Capacity>456</Capacity>
+    <Amount>456</Amount>
+    <RecordingSpeed>456</RecordingSpeed>
+  </StorageDevice>
+</ArrayOfStorageDevice>

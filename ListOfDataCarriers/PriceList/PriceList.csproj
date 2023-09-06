@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ILogs">
+      <HintPath>..\ILogs\bin\Debug\net7.0\ILogs.dll</HintPath>
+    </Reference>
+    <Reference Include="ISerializers">
+      <HintPath>..\ISerializers\bin\Debug\net7.0\ISerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Storages">
+      <HintPath>..\Storages\bin\Debug\net7.0\Storages.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
