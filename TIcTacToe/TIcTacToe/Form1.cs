@@ -37,40 +37,92 @@ namespace TIcTacToe
 
         public void button3_Click(object sender, EventArgs e)
         {
-
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button4_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button5_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button6_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button7_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button8_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button9_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button10_Click(object sender, EventArgs e)
         {
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (Player)
+                button2.Text = "X";
+            else
+                button2.Text = "O";
+            Player = !Player;
+            button2.Enabled = false;
         }
 
         public void button1_Click(object sender, EventArgs e)

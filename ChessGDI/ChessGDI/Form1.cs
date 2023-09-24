@@ -9,18 +9,18 @@ namespace ChessGDI
         {
             InitializeComponent();
             Images = new Image[2, 6];
-            Images[0, 0] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\0.bmp");
-            Images[0, 1] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\1.bmp");
-            Images[0, 2] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\2.bmp");
-            Images[0, 3] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\3.bmp");
-            Images[0, 4] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\4.bmp");
-            Images[0, 5] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\5.bmp");
-            Images[1, 0] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\6.bmp");
-            Images[1, 1] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\7.bmp");
-            Images[1, 2] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\8.bmp");
-            Images[1, 3] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\9.bmp");
-            Images[1, 4] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\10.bmp");
-            Images[1, 5] = Image.FromFile("C:\\Step\\WPF\\ChessGDI\\ChessGDI\\BMPWithShadow\\11.bmp");
+            Images[0, 0] = Image.FromFile("../../../BMPWithShadow\\0.bmp");
+            Images[0, 1] = Image.FromFile("../../../BMPWithShadow\\1.bmp");
+            Images[0, 2] = Image.FromFile("../../../BMPWithShadow\\2.bmp");
+            Images[0, 3] = Image.FromFile("../../../BMPWithShadow\\3.bmp");
+            Images[0, 4] = Image.FromFile("../../../BMPWithShadow\\4.bmp");
+            Images[0, 5] = Image.FromFile("../../../BMPWithShadow\\5.bmp");
+            Images[1, 0] = Image.FromFile("../../../BMPWithShadow\\6.bmp");
+            Images[1, 1] = Image.FromFile("../../../BMPWithShadow\\7.bmp");
+            Images[1, 2] = Image.FromFile("../../../BMPWithShadow\\8.bmp");
+            Images[1, 3] = Image.FromFile("../../../BMPWithShadow\\9.bmp");
+            Images[1, 4] = Image.FromFile("../../../BMPWithShadow\\10.bmp");
+            Images[1, 5] = Image.FromFile("../../../BMPWithShadow\\11.bmp");
         }
 
         public void DrawBoard(object sender, PaintEventArgs e)
