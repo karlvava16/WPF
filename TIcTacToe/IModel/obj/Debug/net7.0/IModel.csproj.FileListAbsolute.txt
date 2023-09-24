@@ -1,0 +1,12 @@
+C:\Step\WPF\TIcTacToe\IModel\bin\Debug\net7.0\IModel.deps.json
+C:\Step\WPF\TIcTacToe\IModel\bin\Debug\net7.0\IModel.dll
+C:\Step\WPF\TIcTacToe\IModel\bin\Debug\net7.0\IModel.pdb
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.csproj.AssemblyReference.cache
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.AssemblyInfoInputs.cache
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.AssemblyInfo.cs
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.csproj.CoreCompileInputs.cache
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.dll
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\refint\IModel.dll
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\IModel.pdb
+C:\Step\WPF\TIcTacToe\IModel\obj\Debug\net7.0\ref\IModel.dll

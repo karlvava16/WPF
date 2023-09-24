@@ -1,0 +1,12 @@
+C:\Step\WPF\TIcTacToe\IView\bin\Debug\net7.0\IView.deps.json
+C:\Step\WPF\TIcTacToe\IView\bin\Debug\net7.0\IView.dll
+C:\Step\WPF\TIcTacToe\IView\bin\Debug\net7.0\IView.pdb
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.csproj.AssemblyReference.cache
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.AssemblyInfoInputs.cache
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.AssemblyInfo.cs
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.csproj.CoreCompileInputs.cache
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.dll
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\refint\IView.dll
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\IView.pdb
+C:\Step\WPF\TIcTacToe\IView\obj\Debug\net7.0\ref\IView.dll

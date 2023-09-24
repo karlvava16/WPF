@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="IModel">
+      <HintPath>..\IModel\bin\Debug\net7.0\IModel.dll</HintPath>
+    </Reference>
+    <Reference Include="IView">
+      <HintPath>..\IView\bin\Debug\net7.0\IView.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\Presenter.deps.json
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\Presenter.dll
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\Presenter.pdb
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\IModel.dll
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\IView.dll
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\IModel.pdb
+C:\Step\WPF\TIcTacToe\Presenter\bin\Debug\net7.0\IView.pdb
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.csproj.AssemblyReference.cache
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.AssemblyInfoInputs.cache
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.AssemblyInfo.cs
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.csproj.CoreCompileInputs.cache
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.csproj.CopyComplete
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.dll
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\refint\Presenter.dll
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\Presenter.pdb
+C:\Step\WPF\TIcTacToe\Presenter\obj\Debug\net7.0\ref\Presenter.dll

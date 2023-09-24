@@ -1,0 +1,17 @@
+C:\Step\WPF\ChessGDI\ChessGDI\bin\Debug\net7.0-windows\ChessGDI.exe
+C:\Step\WPF\ChessGDI\ChessGDI\bin\Debug\net7.0-windows\ChessGDI.deps.json
+C:\Step\WPF\ChessGDI\ChessGDI\bin\Debug\net7.0-windows\ChessGDI.runtimeconfig.json
+C:\Step\WPF\ChessGDI\ChessGDI\bin\Debug\net7.0-windows\ChessGDI.dll
+C:\Step\WPF\ChessGDI\ChessGDI\bin\Debug\net7.0-windows\ChessGDI.pdb
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.csproj.AssemblyReference.cache
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.Form1.resources
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.csproj.GenerateResource.cache
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.AssemblyInfoInputs.cache
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.AssemblyInfo.cs
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.csproj.CoreCompileInputs.cache
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.dll
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\refint\ChessGDI.dll
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.pdb
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ChessGDI.genruntimeconfig.cache
+C:\Step\WPF\ChessGDI\ChessGDI\obj\Debug\net7.0-windows\ref\ChessGDI.dll

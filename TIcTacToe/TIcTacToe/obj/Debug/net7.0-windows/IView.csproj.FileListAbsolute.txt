@@ -1,0 +1,17 @@
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.exe
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.deps.json
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.runtimeconfig.json
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.dll
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.pdb
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.csproj.AssemblyReference.cache
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\TIcTacToe.Form1.resources
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.csproj.GenerateResource.cache
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.AssemblyInfoInputs.cache
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.AssemblyInfo.cs
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.csproj.CoreCompileInputs.cache
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.dll
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\refint\IView.dll
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.pdb
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\IView.genruntimeconfig.cache
+C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\ref\IView.dll
