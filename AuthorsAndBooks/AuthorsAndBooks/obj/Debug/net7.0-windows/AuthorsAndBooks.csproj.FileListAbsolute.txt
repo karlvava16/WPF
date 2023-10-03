@@ -1,0 +1,17 @@
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.exe
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.deps.json
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.runtimeconfig.json
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.dll
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.pdb
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.csproj.AssemblyReference.cache
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.Form1.resources
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.csproj.GenerateResource.cache
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.AssemblyInfoInputs.cache
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.AssemblyInfo.cs
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.csproj.CoreCompileInputs.cache
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.dll
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\refint\AuthorsAndBooks.dll
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.pdb
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.genruntimeconfig.cache
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\ref\AuthorsAndBooks.dll

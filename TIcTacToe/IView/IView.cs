@@ -2,7 +2,10 @@
 {
     public interface IView
     {
-        bool Player { get; set; }
+        public event  void button2_Click(object sender, EventArgs e)
+
+        bool CurrentPlayer { get; set; }
         void IsValid(bool value);
+
     }
 }

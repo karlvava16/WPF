@@ -1,0 +1,12 @@
+C:\Step\WPF\TIcTacToe\IPlayer\bin\Debug\net7.0\IPlayer.deps.json
+C:\Step\WPF\TIcTacToe\IPlayer\bin\Debug\net7.0\IPlayer.dll
+C:\Step\WPF\TIcTacToe\IPlayer\bin\Debug\net7.0\IPlayer.pdb
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.csproj.AssemblyReference.cache
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.AssemblyInfoInputs.cache
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.AssemblyInfo.cs
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.csproj.CoreCompileInputs.cache
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.dll
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\refint\IPlayer.dll
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\IPlayer.pdb
+C:\Step\WPF\TIcTacToe\IPlayer\obj\Debug\net7.0\ref\IPlayer.dll

@@ -10,6 +10,9 @@
     <Reference Include="IModel">
       <HintPath>..\IModel\bin\Debug\net7.0\IModel.dll</HintPath>
     </Reference>
+    <Reference Include="IPlayer">
+      <HintPath>..\IPlayer\bin\Debug\net7.0\IPlayer.dll</HintPath>
+    </Reference>
     <Reference Include="IView">
       <HintPath>..\IView\bin\Debug\net7.0\IView.dll</HintPath>
     </Reference>

@@ -5,9 +5,10 @@ namespace TIcTacToe
     public partial class Form1 : Form, IView
     {
         int Status;
-        public bool Player { get; set; }
+        public bool CurrentPlayer { get; set; }
         public Form1()
         {
+            CurrentPlayer = true;
             InitializeComponent();
             IsValid(false);
         }
@@ -27,101 +28,101 @@ namespace TIcTacToe
 
         public void button2_Click(object sender, EventArgs e)
         {
-            if(Player)
+            if(CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button3_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button4_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button5_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button6_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button7_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button8_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button9_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void button10_Click(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 
         public void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (Player)
+            if (CurrentPlayer)
                 button2.Text = "X";
             else
                 button2.Text = "O";
-            Player = !Player;
+            CurrentPlayer = !CurrentPlayer;
             button2.Enabled = false;
         }
 

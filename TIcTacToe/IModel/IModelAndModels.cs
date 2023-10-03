@@ -9,7 +9,7 @@
         void Update();
     }
 
-    public class IModelsAndModels : IModel
+    public class TicTacToe : IModel
     {
         public bool? PlayerWin { get; set; }
         public bool GameStatus { get; set; }
