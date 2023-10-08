@@ -18,3 +18,9 @@ C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\ref\TIcTacToe.dll
 C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.dll
 C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IView.pdb
 C:\Step\WPF\TIcTacToe\TIcTacToe\obj\Debug\net7.0-windows\TIcTacToe.csproj.CopyComplete
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IModel.dll
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\Presenter.dll
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IPlayer.dll
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IModel.pdb
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\Presenter.pdb
+C:\Step\WPF\TIcTacToe\TIcTacToe\bin\Debug\net7.0-windows\IPlayer.pdb

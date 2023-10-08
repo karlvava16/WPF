@@ -53,9 +53,11 @@
             // 
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(217, 1);
+            groupBox1.Location = new Point(190, 1);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(199, 80);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(174, 60);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "СТОРОНА";
@@ -63,9 +65,10 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(6, 56);
+            radioButton2.Location = new Point(5, 42);
+            radioButton2.Margin = new Padding(3, 2, 3, 2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(41, 24);
+            radioButton2.Size = new Size(34, 19);
             radioButton2.TabIndex = 1;
             radioButton2.Text = "O";
             radioButton2.UseVisualStyleBackColor = true;
@@ -74,31 +77,33 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Checked = true;
-            radioButton1.Location = new Point(6, 26);
+            radioButton1.Location = new Point(5, 20);
+            radioButton1.Margin = new Padding(3, 2, 3, 2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(39, 24);
+            radioButton1.Size = new Size(32, 19);
             radioButton1.TabIndex = 0;
             radioButton1.TabStop = true;
             radioButton1.Text = "X";
             radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(12, 12);
+            button1.Location = new Point(10, 9);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(199, 68);
+            button1.Size = new Size(174, 51);
             button1.TabIndex = 0;
-            button1.Text = "Перезапустить";
+            button1.Text = "Начать";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(6, 56);
+            radioButton3.Location = new Point(5, 42);
+            radioButton3.Margin = new Padding(3, 2, 3, 2);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(95, 24);
+            radioButton3.Size = new Size(79, 19);
             radioButton3.TabIndex = 1;
             radioButton3.Text = "СЛОЖНО";
             radioButton3.UseVisualStyleBackColor = true;
@@ -107,9 +112,10 @@
             // 
             radioButton4.AutoSize = true;
             radioButton4.Checked = true;
-            radioButton4.Location = new Point(6, 26);
+            radioButton4.Location = new Point(5, 20);
+            radioButton4.Margin = new Padding(3, 2, 3, 2);
             radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(75, 24);
+            radioButton4.Size = new Size(61, 19);
             radioButton4.TabIndex = 0;
             radioButton4.TabStop = true;
             radioButton4.Text = "ЛЕГКО";
@@ -119,9 +125,11 @@
             // 
             groupBox2.Controls.Add(radioButton3);
             groupBox2.Controls.Add(radioButton4);
-            groupBox2.Location = new Point(422, 1);
+            groupBox2.Location = new Point(369, 1);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(199, 80);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(174, 60);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "СЛОЖНОСТЬ";
@@ -129,9 +137,10 @@
             // button2
             // 
             button2.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(16, 91);
+            button2.Location = new Point(14, 68);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(200, 200);
+            button2.Size = new Size(175, 150);
             button2.TabIndex = 3;
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = true;
@@ -140,9 +149,10 @@
             // button3
             // 
             button3.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(216, 91);
+            button3.Location = new Point(189, 68);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(200, 200);
+            button3.Size = new Size(175, 150);
             button3.TabIndex = 4;
             button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
@@ -151,9 +161,10 @@
             // button4
             // 
             button4.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(416, 91);
+            button4.Location = new Point(364, 68);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(200, 200);
+            button4.Size = new Size(175, 150);
             button4.TabIndex = 5;
             button4.TextAlign = ContentAlignment.MiddleRight;
             button4.UseVisualStyleBackColor = true;
@@ -162,9 +173,10 @@
             // button5
             // 
             button5.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(16, 291);
+            button5.Location = new Point(14, 218);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Size = new Size(200, 200);
+            button5.Size = new Size(175, 150);
             button5.TabIndex = 6;
             button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = true;
@@ -173,9 +185,10 @@
             // button6
             // 
             button6.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(216, 291);
+            button6.Location = new Point(189, 218);
+            button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(200, 200);
+            button6.Size = new Size(175, 150);
             button6.TabIndex = 7;
             button6.TextAlign = ContentAlignment.MiddleRight;
             button6.UseVisualStyleBackColor = true;
@@ -184,9 +197,10 @@
             // button7
             // 
             button7.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Location = new Point(416, 291);
+            button7.Location = new Point(364, 218);
+            button7.Margin = new Padding(3, 2, 3, 2);
             button7.Name = "button7";
-            button7.Size = new Size(200, 200);
+            button7.Size = new Size(175, 150);
             button7.TabIndex = 8;
             button7.TextAlign = ContentAlignment.MiddleRight;
             button7.UseVisualStyleBackColor = true;
@@ -195,9 +209,10 @@
             // button8
             // 
             button8.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.Location = new Point(16, 491);
+            button8.Location = new Point(14, 368);
+            button8.Margin = new Padding(3, 2, 3, 2);
             button8.Name = "button8";
-            button8.Size = new Size(200, 200);
+            button8.Size = new Size(175, 150);
             button8.TabIndex = 9;
             button8.TextAlign = ContentAlignment.MiddleRight;
             button8.UseVisualStyleBackColor = true;
@@ -206,9 +221,10 @@
             // button9
             // 
             button9.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.Location = new Point(216, 491);
+            button9.Location = new Point(189, 368);
+            button9.Margin = new Padding(3, 2, 3, 2);
             button9.Name = "button9";
-            button9.Size = new Size(200, 200);
+            button9.Size = new Size(175, 150);
             button9.TabIndex = 10;
             button9.TextAlign = ContentAlignment.MiddleRight;
             button9.UseVisualStyleBackColor = true;
@@ -217,9 +233,10 @@
             // button10
             // 
             button10.Font = new Font("UD Digi Kyokasho NP-B", 90F, FontStyle.Bold, GraphicsUnit.Point);
-            button10.Location = new Point(416, 491);
+            button10.Location = new Point(364, 368);
+            button10.Margin = new Padding(3, 2, 3, 2);
             button10.Name = "button10";
-            button10.Size = new Size(200, 200);
+            button10.Size = new Size(175, 150);
             button10.TabIndex = 11;
             button10.TextAlign = ContentAlignment.MiddleRight;
             button10.UseVisualStyleBackColor = true;
@@ -227,9 +244,9 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(632, 703);
+            ClientSize = new Size(553, 527);
             Controls.Add(button10);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -242,6 +259,7 @@
             Controls.Add(groupBox2);
             Controls.Add(button1);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             RightToLeftLayout = true;
             Text = "TicTacToe";

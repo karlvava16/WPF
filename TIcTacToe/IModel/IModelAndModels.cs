@@ -7,6 +7,7 @@
 
         void Restart();
         void Update();
+        public bool? this[int i, int j] { get; set; }
     }
 
     public class TicTacToe : IModel
@@ -21,7 +22,7 @@
             get { return arrValue[i, j]; }
             set
             {
-                if (this[i, j] != null && value != null)
+                if (this[i, j] == null && value != null)
                 {
                     arrValue[i, j] = value;
                     Update();
