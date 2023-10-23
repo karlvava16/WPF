@@ -13,8 +13,8 @@
         <Border DockPanel.Dock="Right">
             <StackPanel >
                 <ListBox Name="CorrectNumbers" Margin ="10" Width="100" Height="250" FontSize="20"/>
-                <Button  Margin ="5" Width="100" Height="40" Content="New game" FontSize="20" Click="NewGame"/>
-                <Label Content="60" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold"/>
+                <Button  Name="new_game" Margin ="5" Width="100" Height="40" Content="New game" FontSize="20" Click="NewGame"/>
+                <Label Name ="Time_label" Content="" HorizontalAlignment="Center" FontSize="20" FontWeight="ExtraBold"/>
             </StackPanel>
         </Border>
 

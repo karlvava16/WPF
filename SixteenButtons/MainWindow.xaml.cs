@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,11 +14,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Game;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace SixteenButtons
 {
+   
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -26,7 +30,9 @@ namespace SixteenButtons
         List<Button> buttons;
         Game_SixteenButtons game;
         TimeSpan CurrentTime;
-       
+        DispatcherTimer time;
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +56,10 @@ namespace SixteenButtons
             buttons.Add(Button33);
 
             IsDisabled(true);
+
+            time = new DispatcherTimer();
+            time.Interval = new TimeSpan(0,0,1);
+            time.Tick += TimerCallbackMethod;
         }
         public void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -60,12 +70,14 @@ namespace SixteenButtons
             {
                 clickedButton.IsEnabled = false; // Disable the button
                 CorrectNumbers.Items.Add(clickedValue);
+                if (CorrectNumbers.Items.Count == 16)
+                {
+                    Win();
+                }
             }
             else
             {
-                CurrentTime = CurrentTime.Subtract(new TimeSpan(0, 0, 5));
-                prog_bar.Value = CurrentTime.TotalSeconds;
-
+                CurrentTime = CurrentTime.Subtract(new TimeSpan(0, 0, 4));
             }
 
         }
@@ -90,7 +102,38 @@ namespace SixteenButtons
             CurrentTime = game.TimeSec;
             game.GameStatus = 1;
             IsDisabled(false);
+            CorrectNumbers.Items.Clear();
+            prog_bar.Value = CurrentTime.TotalSeconds;
+            Time_label.Content = CurrentTime.ToString("mm':'ss");
 
+            time.Start();
+        }
+
+        private void TimerCallbackMethod(object sender, EventArgs e)
+        {
+            CurrentTime = CurrentTime.Subtract(new TimeSpan(0, 0, 1));
+            prog_bar.Value = CurrentTime.TotalSeconds;
+            Time_label.Content = CurrentTime.ToString("mm':'ss");
+            if (!(CurrentTime.TotalSeconds > 0) && game.GameStatus != 2)
+            { 
+                Lose();
+            }
+        }
+
+        void Win()
+        {
+            time.Stop();
+            game.GameStatus = 2;
+            IsDisabled(true);
+            MessageBox.Show("You Win!", "You Win!");
+        }
+
+        void Lose()
+        {
+            time.Stop();
+            game.GameStatus = 3;
+            IsDisabled(true);
+            MessageBox.Show("You lose", "You lose");
         }
     }
 }
