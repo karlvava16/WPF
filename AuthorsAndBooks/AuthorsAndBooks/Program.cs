@@ -10,8 +10,11 @@ namespace AuthorsAndBooks
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            MainForm form = new MainForm();
+            Presenter presenter = new Presenter(new Books_Program(), form);
+            Application.Run(form);
         }
     }
 }

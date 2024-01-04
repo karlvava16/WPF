@@ -3,6 +3,8 @@ C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndB
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.runtimeconfig.json
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.dll
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\bin\Debug\net7.0-windows\AuthorsAndBooks.pdb
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.AddForm.resources
+C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.MainForm.resources
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.csproj.GenerateResource.cache
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.GeneratedMSBuildEditorConfig.editorconfig
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.AssemblyInfoInputs.cache
@@ -13,5 +15,3 @@ C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\refint\Auth
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.pdb
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.genruntimeconfig.cache
 C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\ref\AuthorsAndBooks.dll
-C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.AddForm.resources
-C:\Step\WPF\AuthorsAndBooks\AuthorsAndBooks\obj\Debug\net7.0-windows\AuthorsAndBooks.MainForm.resources

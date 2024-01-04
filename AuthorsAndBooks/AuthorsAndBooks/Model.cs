@@ -36,7 +36,6 @@ namespace AuthorsAndBooks
 
         public Books_Program()
         {
-
             books = new List<Book>();
         }
         public void Add_Author(string newAuthor)
@@ -52,7 +51,7 @@ namespace AuthorsAndBooks
         public void Add_BookName(int i, string newA)
         {
 
-            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("No Author Exist"); }
+            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Автора не сущесвтует"); }
 
             books[i].Name.Add(newA);
 
@@ -61,14 +60,14 @@ namespace AuthorsAndBooks
 
         public void Change_Author(int i, string newAuthor)
         {
-            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Nothing happend"); }
+            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Ничего не произошло"); }
             books[i].Author = newAuthor;
 
         }
 
         public void Change_BookName(int i, string newBookName, string curBook)
         {
-            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Something went wrong"); }
+            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Что-то пошло не так"); }
 
 
             foreach (var item in books)
@@ -91,14 +90,14 @@ namespace AuthorsAndBooks
         public void Delete_Author(int i)
         {
 
-            if (i < 0 || i > books.Count() || books.Count() == 0) { throw new Exception("Nothing heppend"); }
+            if (i < 0 || i > books.Count() || books.Count() == 0) { throw new Exception("Ничего не произошло"); }
             books.RemoveAt(i);
 
         }
 
         public void Delete_BookName(int i, string BookName)
         {
-            if (i > books.Count()) { throw new Exception("Something went wrong"); }
+            if (i > books.Count()) { throw new Exception("Что-то пошло не так"); }
 
             foreach (var item in books)
             {
@@ -124,7 +123,7 @@ namespace AuthorsAndBooks
         public void SaveFile(string name)
         {
             string json = JsonSerializer.Serialize(books);
-            File.WriteAllText($"{name}.json", json);
+            File.WriteAllText(name, json);
 
 
 

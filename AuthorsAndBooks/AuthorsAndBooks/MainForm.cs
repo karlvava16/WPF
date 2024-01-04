@@ -77,7 +77,7 @@ namespace AuthorsAndBooks
                     }
                     else
                     {
-                        throw new Exception("Canceled");
+                        throw new Exception("Отменено");
                     }
                 }
                 catch (Exception mes)
@@ -97,14 +97,14 @@ namespace AuthorsAndBooks
         {
             try
             {
-                DialogResult result = MessageBox.Show("Are u sure ?", "Warning", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Вы уверены, что хотите удалить автора?", "Предупреждение", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     Delete_Author?.Invoke(this, EventArgs.Empty);
                 }
                 else
                 {
-                    throw new Exception("Canceled");
+                    throw new Exception("Отменено");
                 }
             }
             catch (Exception mes)
@@ -128,7 +128,7 @@ namespace AuthorsAndBooks
                 }
                 else
                 {
-                    throw new Exception("Canceled");
+                    throw new Exception("Отменено");
                 }
             }
             catch (Exception mes)
@@ -151,7 +151,7 @@ namespace AuthorsAndBooks
                 }
                 else
                 {
-                    throw new Exception("Canceled");
+                    throw new Exception("Отменено");
                 }
             }
             catch (Exception mes)
@@ -165,7 +165,7 @@ namespace AuthorsAndBooks
         {
             try
             {
-                DialogResult result = MessageBox.Show("Are u sure", "Warning", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Вы уверены, что хотите удалить книгу?", "Предупреждение", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
 
@@ -173,7 +173,7 @@ namespace AuthorsAndBooks
                 }
                 else
                 {
-                    throw new Exception("Canceled");
+                    throw new Exception("Отменено");
                 }
             }
             catch (Exception mes)
@@ -196,7 +196,7 @@ namespace AuthorsAndBooks
                 }
                 else
                 {
-                    throw new Exception("Canceled");
+                    throw new Exception("Отменено");
                 }
             }
             catch (Exception mes)

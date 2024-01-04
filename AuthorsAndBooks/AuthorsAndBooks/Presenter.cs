@@ -34,7 +34,7 @@ namespace AuthorsAndBooks
             _IView.Delete_Author += new EventHandler<EventArgs>(ShowAllBooks);
 
 
-            _IView.Add_BookName += new EventHandler<EventArgs>(Add_book);
+            _IView.Add_BookName += new EventHandler<EventArgs>(AddBook);
 
             _IView.Add_BookName += new EventHandler<EventArgs>(ShowAllBooks);
 
@@ -140,7 +140,7 @@ namespace AuthorsAndBooks
         }
 
 
-        public void Add_book(object sender, EventArgs e)
+        public void AddBook(object sender, EventArgs e)
         {
             try
             {
