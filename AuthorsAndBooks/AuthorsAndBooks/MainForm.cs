@@ -27,12 +27,12 @@ namespace AuthorsAndBooks
         public event EventHandler<EventArgs> Add_Author;
         public event EventHandler<EventArgs> Change_Author;
         public event EventHandler<EventArgs> Delete_Author;
-        public event EventHandler<EventArgs> Add_BookName;
-        public event EventHandler<EventArgs> Change_BookName;
-        public event EventHandler<EventArgs> Delete_BookName;
-        public event EventHandler<EventArgs> Show_BooksA;
-        public event EventHandler<EventArgs> SaveFile;
-        public event EventHandler<EventArgs> LoadFile;
+        public event EventHandler<EventArgs> Add_Book_Name;
+        public event EventHandler<EventArgs> Change_Book_Name;
+        public event EventHandler<EventArgs> Delete_Book_Name;
+        public event EventHandler<EventArgs> Show_Books_Author;
+        public event EventHandler<EventArgs> Save_File;
+        public event EventHandler<EventArgs> Load_File;
 
         public void ShowErrorMessages(string mes)
         {
@@ -147,7 +147,7 @@ namespace AuthorsAndBooks
                 if (result == DialogResult.Yes)
                 {
                     Text = form2.newText;
-                    Add_BookName?.Invoke(this, EventArgs.Empty);
+                    Add_Book_Name?.Invoke(this, EventArgs.Empty);
                 }
                 else
                 {
@@ -169,7 +169,7 @@ namespace AuthorsAndBooks
                 if (result == DialogResult.Yes)
                 {
 
-                    Delete_BookName?.Invoke(this, EventArgs.Empty);
+                    Delete_Book_Name?.Invoke(this, EventArgs.Empty);
                 }
                 else
                 {
@@ -192,7 +192,7 @@ namespace AuthorsAndBooks
                 if (result == DialogResult.Yes)
                 {
                     Text = form2.newText;
-                    Change_BookName?.Invoke(this, EventArgs.Empty);
+                    Change_Book_Name?.Invoke(this, EventArgs.Empty);
                 }
                 else
                 {
@@ -212,7 +212,7 @@ namespace AuthorsAndBooks
             curAuthor = ChoiseBox.Text;
             if (Filter.Checked)
             {
-                Show_BooksA?.Invoke(this, EventArgs.Empty);
+                Show_Books_Author?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -233,7 +233,7 @@ namespace AuthorsAndBooks
             curAuthor = ChoiseBox.Text;
             if (Filter.Checked)
             {
-                Show_BooksA?.Invoke(this, EventArgs.Empty);
+                Show_Books_Author?.Invoke(this, EventArgs.Empty);
 
             }
             else
@@ -251,7 +251,7 @@ namespace AuthorsAndBooks
             {
 
                 Text = saveFileDialog.FileName;
-                SaveFile?.Invoke(this, EventArgs.Empty);
+                Save_File?.Invoke(this, EventArgs.Empty);
             }
 
         }
@@ -265,7 +265,7 @@ namespace AuthorsAndBooks
 
 
                 Text = openFileDialog.FileName;
-                LoadFile?.Invoke(this, EventArgs.Empty);
+                Load_File?.Invoke(this, EventArgs.Empty);
             }
         }
 

@@ -24,55 +24,55 @@ namespace AuthorsAndBooks
             Text = " ";
             _iModel = iModel;
             _IView = iView;
-            _IView.LoadFile += new EventHandler<EventArgs>(LoadFile);
-            _IView.LoadFile += new EventHandler<EventArgs>(ShowAllAuthor);
-            _IView.LoadFile += new EventHandler<EventArgs>(ShowAllBooks);
+            _IView.Load_File += new EventHandler<EventArgs>(LoadFile);
+            _IView.Load_File += new EventHandler<EventArgs>(ShowAllAuthor);
+            _IView.Load_File += new EventHandler<EventArgs>(ShowAllBooks);
 
 
-            _IView.Delete_Author += new EventHandler<EventArgs>(Delete_Author);
+            _IView.Delete_Author += new EventHandler<EventArgs>(DeleteAuthor);
             _IView.Delete_Author += new EventHandler<EventArgs>(ShowAllAuthor);
             _IView.Delete_Author += new EventHandler<EventArgs>(ShowAllBooks);
 
 
-            _IView.Add_BookName += new EventHandler<EventArgs>(AddBook);
+            _IView.Add_Book_Name += new EventHandler<EventArgs>(AddBook);
 
-            _IView.Add_BookName += new EventHandler<EventArgs>(ShowAllBooks);
+            _IView.Add_Book_Name += new EventHandler<EventArgs>(ShowAllBooks);
 
 
             _IView.Show_All += new EventHandler<EventArgs>(ShowAllAuthor);
             _IView.Show_All += new EventHandler<EventArgs>(ShowAllBooks);
 
 
-            _IView.Add_Author += new EventHandler<EventArgs>(Add_Author);
+            _IView.Add_Author += new EventHandler<EventArgs>(AddAuthor);
             _IView.Add_Author += new EventHandler<EventArgs>(ShowAllAuthor);
 
 
 
-            _IView.Change_BookName += new EventHandler<EventArgs>(Change_BookName);
+            _IView.Change_Book_Name += new EventHandler<EventArgs>(ChangeBookName);
 
-            _IView.Change_BookName += new EventHandler<EventArgs>(ShowAllBooks);
+            _IView.Change_Book_Name += new EventHandler<EventArgs>(ShowAllBooks);
 
-            _IView.Delete_BookName += new EventHandler<EventArgs>(Delete_BookName);
+            _IView.Delete_Book_Name += new EventHandler<EventArgs>(DeleteBookName);
 
-            _IView.Delete_BookName += new EventHandler<EventArgs>(ShowAllBooks);
+            _IView.Delete_Book_Name += new EventHandler<EventArgs>(ShowAllBooks);
 
 
 
-            _IView.Change_Author += new EventHandler<EventArgs>(Change_Author);
+            _IView.Change_Author += new EventHandler<EventArgs>(ChangeAuthor);
             _IView.Change_Author += new EventHandler<EventArgs>(ShowAllAuthor);
 
 
-            _IView.SaveFile += new EventHandler<EventArgs>(SAVE);
-            _IView.SaveFile += new EventHandler<EventArgs>(ShowAllAuthor);
-            _IView.SaveFile += new EventHandler<EventArgs>(ShowAllBooks);
+            _IView.Save_File += new EventHandler<EventArgs>(SAVE);
+            _IView.Save_File += new EventHandler<EventArgs>(ShowAllAuthor);
+            _IView.Save_File += new EventHandler<EventArgs>(ShowAllBooks);
 
 
-            _IView.LoadFile += new EventHandler<EventArgs>(LoadFile);
-            _IView.LoadFile += new EventHandler<EventArgs>(ShowAllAuthor);
-            _IView.LoadFile += new EventHandler<EventArgs>(ShowAllBooks);
+            _IView.Load_File += new EventHandler<EventArgs>(LoadFile);
+            _IView.Load_File += new EventHandler<EventArgs>(ShowAllAuthor);
+            _IView.Load_File += new EventHandler<EventArgs>(ShowAllBooks);
 
 
-            _IView.Show_BooksA += new EventHandler<EventArgs>(ShowAllBooks_A);
+            _IView.Show_Books_Author += new EventHandler<EventArgs>(ShowAllBooks_A);
 
         }
 
@@ -90,11 +90,11 @@ namespace AuthorsAndBooks
         }
 
 
-        public void Change_BookName(object sender, EventArgs e)
+        public void ChangeBookName(object sender, EventArgs e)
         {
             try
             {
-                _iModel.Change_BookName(_IView.indexBook, _IView.Text, _IView.curBook);
+                _iModel.ChangeBookName(_IView.indexBook, _IView.Text, _IView.curBook);
             }
             catch (Exception mes)
             {
@@ -103,11 +103,11 @@ namespace AuthorsAndBooks
         }
 
 
-        public void Change_Author(object sender, EventArgs e)
+        public void ChangeAuthor(object sender, EventArgs e)
         {
             try
             {
-                _iModel.Change_Author(_IView.indexAuthor, _IView.Text);
+                _iModel.ChangeAuthor(_IView.indexAuthor, _IView.Text);
             }
             catch (Exception mes)
             {
@@ -116,27 +116,27 @@ namespace AuthorsAndBooks
         }
 
 
-        public void Add_Author(object sender, EventArgs e)
+        public void AddAuthor(object sender, EventArgs e)
         {
-            _iModel.Add_Author(_IView.Text);
+            _iModel.AddAuthor(_IView.Text);
         }
 
 
         public void ShowAllAuthor(object sender, EventArgs e)
         {
-            _IView.WriteAllAuthors(_iModel.Show_AllAuthors());
+            _IView.WriteAllAuthors(_iModel.ShowAllAuthors());
         }
 
 
         public void ShowAllBooks(object sender, EventArgs e)
         {
-            _IView.WriteAllBooks(_iModel.Show_All());
+            _IView.WriteAllBooks(_iModel.ShowAll());
         }
 
 
         public void ShowAllBooks_A(object sender, EventArgs e)
         {
-            _IView.WriteAllBooks(_iModel.Show_BooksA(_IView.curAuthor));
+            _IView.WriteAllBooks(_iModel.ShowBooksAuthor(_IView.curAuthor));
         }
 
 
@@ -144,7 +144,7 @@ namespace AuthorsAndBooks
         {
             try
             {
-                _iModel.Add_BookName(_IView.indexAuthor, _IView.Text);
+                _iModel.AddBookName(_IView.indexAuthor, _IView.Text);
             }
             catch (Exception mes)
             {
@@ -153,11 +153,11 @@ namespace AuthorsAndBooks
         }
 
 
-        public void Delete_BookName(object sender, EventArgs e)
+        public void DeleteBookName(object sender, EventArgs e)
         {
             try
             {
-                _iModel.Delete_BookName(_IView.indexAuthor, _IView.curBook);
+                _iModel.DeleteBookName(_IView.indexAuthor, _IView.curBook);
             }
             catch (Exception mes)
             {
@@ -166,11 +166,11 @@ namespace AuthorsAndBooks
         }
 
 
-        public void Delete_Author(object sender, EventArgs e)
+        public void DeleteAuthor(object sender, EventArgs e)
         {
             try
             {
-                _iModel.Delete_Author(_IView.indexAuthor);
+                _iModel.DeleteAuthor(_IView.indexAuthor);
             }
             catch (Exception mes)
             {

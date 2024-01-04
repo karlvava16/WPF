@@ -11,15 +11,15 @@ namespace AuthorsAndBooks
     {
 
         List<Book> books { get; set; }
-        void Add_Author(string a);
-        void Change_Author(int i, string a);
-        void Delete_Author(int i);
-        void Add_BookName(int i, string newBookName);
-        void Change_BookName(int i, string a, string curBook);
-        void Delete_BookName(int i, string BookName);
-        List<string> Show_All();
-        List<string> Show_AllAuthors();
-        List<string> Show_BooksA(string A);
+        void AddAuthor(string author);
+        void ChangeAuthor(int index, string author);
+        void DeleteAuthor(int index);
+        void AddBookName(int index, string newBookName);
+        void ChangeBookName(int index, string author, string curBook);
+        void DeleteBookName(int index, string BookName);
+        List<string> ShowAll();
+        List<string> ShowAllAuthors();
+        List<string> ShowBooksAuthor(string A);
 
 
         void SaveFile(string name);
@@ -38,7 +38,7 @@ namespace AuthorsAndBooks
         {
             books = new List<Book>();
         }
-        public void Add_Author(string newAuthor)
+        public void AddAuthor(string newAuthor)
         {
 
 
@@ -48,26 +48,26 @@ namespace AuthorsAndBooks
 
         }
 
-        public void Add_BookName(int i, string newA)
+        public void AddBookName(int index, string newA)
         {
 
-            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Автора не сущесвтует"); }
+            if (index < 0 || index > books.Count() || books.Count < 1) { throw new Exception("Автора не сущесвтует"); }
 
-            books[i].Name.Add(newA);
+            books[index].Name.Add(newA);
 
 
         }
 
-        public void Change_Author(int i, string newAuthor)
+        public void ChangeAuthor(int index, string newAuthor)
         {
-            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Ничего не произошло"); }
-            books[i].Author = newAuthor;
+            if (index < 0 || index > books.Count() || books.Count < 1) { throw new Exception("Ничего не произошло"); }
+            books[index].Author = newAuthor;
 
         }
 
-        public void Change_BookName(int i, string newBookName, string curBook)
+        public void ChangeBookName(int index, string newBookName, string curBook)
         {
-            if (i < 0 || i > books.Count() || books.Count < 1) { throw new Exception("Что-то пошло не так"); }
+            if (index < 0 || index > books.Count() || books.Count < 1) { throw new Exception("Что-то пошло не так"); }
 
 
             foreach (var item in books)
@@ -87,17 +87,17 @@ namespace AuthorsAndBooks
 
 
 
-        public void Delete_Author(int i)
+        public void DeleteAuthor(int index)
         {
 
-            if (i < 0 || i > books.Count() || books.Count() == 0) { throw new Exception("Ничего не произошло"); }
-            books.RemoveAt(i);
+            if (index < 0 || index > books.Count() || books.Count() == 0) { throw new Exception("Ничего не произошло"); }
+            books.RemoveAt(index);
 
         }
 
-        public void Delete_BookName(int i, string BookName)
+        public void DeleteBookName(int index, string BookName)
         {
-            if (i > books.Count()) { throw new Exception("Что-то пошло не так"); }
+            if (index > books.Count()) { throw new Exception("Что-то пошло не так"); }
 
             foreach (var item in books)
             {
@@ -129,7 +129,7 @@ namespace AuthorsAndBooks
 
         }
 
-        public List<string> Show_All()
+        public List<string> ShowAll()
         {
             List<string> list = new List<string>();
             foreach (var item in books)
@@ -147,14 +147,14 @@ namespace AuthorsAndBooks
             return list;
         }
 
-        public List<string> Show_BooksA(string a)
+        public List<string> ShowBooksAuthor(string author)
         {
             List<string> list = new List<string>();
             foreach (var item in books)
             {
                 foreach (var item2 in item.Name)
                 {
-                    if (item.Author.Contains(a))
+                    if (item.Author.Contains(author))
                     {
                         if (item2 != "")
                         {
@@ -166,7 +166,7 @@ namespace AuthorsAndBooks
             }
             return list;
         }
-        public List<string> Show_AllAuthors()
+        public List<string> ShowAllAuthors()
         {
             List<string> list = new List<string>();
             foreach (var item in books)

@@ -12,12 +12,12 @@ namespace AuthorsAndBooks
         event EventHandler<EventArgs> Add_Author;
         event EventHandler<EventArgs> Change_Author;
         event EventHandler<EventArgs> Delete_Author;
-        event EventHandler<EventArgs> Add_BookName;
-        event EventHandler<EventArgs> Change_BookName;
-        event EventHandler<EventArgs> Delete_BookName;
-        event EventHandler<EventArgs> Show_BooksA;
-        event EventHandler<EventArgs> SaveFile;
-        event EventHandler<EventArgs> LoadFile;
+        event EventHandler<EventArgs> Add_Book_Name;
+        event EventHandler<EventArgs> Change_Book_Name;
+        event EventHandler<EventArgs> Delete_Book_Name;
+        event EventHandler<EventArgs> Show_Books_Author;
+        event EventHandler<EventArgs> Save_File;
+        event EventHandler<EventArgs> Load_File;
 
 
         int indexBook { get; set; }
