@@ -1,0 +1,16 @@
+C:\Step\WPF\Clocks\bin\Debug\net7.0-windows\Clocks.exe
+C:\Step\WPF\Clocks\bin\Debug\net7.0-windows\Clocks.deps.json
+C:\Step\WPF\Clocks\bin\Debug\net7.0-windows\Clocks.runtimeconfig.json
+C:\Step\WPF\Clocks\bin\Debug\net7.0-windows\Clocks.dll
+C:\Step\WPF\Clocks\bin\Debug\net7.0-windows\Clocks.pdb
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.Form1.resources
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.csproj.GenerateResource.cache
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.AssemblyInfoInputs.cache
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.AssemblyInfo.cs
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.csproj.CoreCompileInputs.cache
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.dll
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\refint\Clocks.dll
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.pdb
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\Clocks.genruntimeconfig.cache
+C:\Step\WPF\Clocks\obj\Debug\net7.0-windows\ref\Clocks.dll
