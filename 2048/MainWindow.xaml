@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2048"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="500" MinWidth="400" Height="500" Width="400">
+        Title="MainWindow" MinHeight="500" MinWidth="400" Height="500" Width="400"
+         KeyDown="Window_KeyDown">
 
     <Window.Resources>
         <Style TargetType="Border">
@@ -31,8 +32,22 @@
             <Setter Property="FontSize" Value="15"></Setter>
             <Setter Property="Background" Value="White"></Setter>
         </Style>
+
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="{DynamicResource Brush}"/>
+        </Style>
     </Window.Resources>
-    
+
+    <Window.InputBindings>
+        <KeyBinding Key="Left" Command="{Binding LeftArrowCommand}" />
+        <KeyBinding Key="Right" Command="{Binding RightArrowCommand}" />
+        <KeyBinding Key="Up" Command="{Binding UpArrowCommand}" />
+        <KeyBinding Key="Down" Command="{Binding DownArrowCommand}" />
+    </Window.InputBindings>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -43,8 +58,8 @@
 
         <Menu Grid.Row="0">
             <MenuItem Header="Menu">
-                <MenuItem  Header="Restart"></MenuItem>
-                <MenuItem Header="Exit"></MenuItem>
+                <MenuItem  Header="Restart" Click="Restart"/>
+                <MenuItem Header="Exit"/>
             </MenuItem>
         </Menu>
         
@@ -54,15 +69,17 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            
+            
             <Border Grid.Column="0">
-                <StackPanel>
+                <StackPanel HorizontalAlignment="Center">
                     <TextBlock Text="Score" Style="{StaticResource InfoTextBlock}"/>
                     <TextBlock Text="0" Style="{StaticResource ScoreTextBlock}"/>
                 </StackPanel>
             </Border>
             
             <Border Grid.Column="1">
-                <StackPanel>
+                <StackPanel  HorizontalAlignment="Center">
                     <TextBlock Text="Max Score" Style="{StaticResource InfoTextBlock}"/>
                     <TextBlock Text="0" Style="{StaticResource ScoreTextBlock}"/>
                 </StackPanel>
@@ -71,16 +88,16 @@
         
         <Grid Grid.Row="2" Width="auto" Height="auto" Margin="20">
             <Grid.RowDefinitions>
-                <RowDefinition Height = "*"/>
-                <RowDefinition Height = "*"/>
-                <RowDefinition Height = "*"/>
-                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "1*"/>
+                <RowDefinition Height = "1*"/>
+                <RowDefinition Height = "1*"/>
+                <RowDefinition Height = "1*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width = "*"/>
-                <ColumnDefinition Width = "*"/>
-                <ColumnDefinition Width = "*"/>
-                <ColumnDefinition Width = "*"/>
+                <ColumnDefinition Width = "1*"/>
+                <ColumnDefinition Width = "1*"/>
+                <ColumnDefinition Width = "1*"/>
+                <ColumnDefinition Width = "1*"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Row ="0" Grid.Column="0" Name="Button00"/>
             <Button Grid.Row ="0" Grid.Column="1" Name="Button01"/>
