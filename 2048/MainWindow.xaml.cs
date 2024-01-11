@@ -11,10 +11,9 @@ namespace _2048
         private int[,] board = new int[4, 4]; // Represents the game board
         public SolidColorBrush[] solidBrush { get; set; }
 
-        private int score = 0;
-        public int Score { get { return score; } }
+        public int _Score { get; set; }
+        public int _MaxScore { get; set; }
 
-        //public bool IsPossible { get; set; }
 
 
 
@@ -54,18 +53,18 @@ namespace _2048
 
 
             // Add two initial tiles to the board
-            AddNewTile();
-            AddNewTile();
+            AddNew();
+            AddNew();
 
             // Update the UI to reflect the initial state
             UpdateUI();
         }
 
-        private void AddNewTile()
+        private void AddNew()
         {
             // Adds a new tile (2 or 4) to a random empty cell on the board
             Random rand = new Random();
-            int value = rand.Next(1, 3) * 2; // Either 2 or 4
+            int value = rand.Next(1, 3) * 2;
 
             int row, col;
             do
@@ -84,8 +83,7 @@ namespace _2048
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            if (!CheckForPossibility())
-            {  return; }
+            if (!CheckForPossibility()) return;
 
             // Handle key events (left, right, up, down)
             switch (e.Key)
@@ -105,7 +103,7 @@ namespace _2048
             }
 
             // Add a new tile after each move
-            AddNewTile();
+            AddNew();
 
             // Update the UI
             UpdateUI();
@@ -162,6 +160,24 @@ namespace _2048
                     }
                 }
             }
+
+            _Score = 0;
+
+           for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    _Score += board[i, j];
+                }
+            }
+
+            Score.Text = _Score.ToString();
+
+           if (_Score > _MaxScore) 
+            {
+                _MaxScore = _Score;
+                MaxScore.Text = _Score.ToString();
+            }
         }
 
         private bool CheckForPossibility()
@@ -190,14 +206,11 @@ namespace _2048
 
                 for (int j = 0; j < 4; j++)
                 {
-
-
                     for (int i = 1, k = 0; i <= 3; i++)
                     {
                         if (board[j, k] != board[j, i] && board[j, i] != 0)
                         {
                             k++;
-
                         }
 
                         else if (board[j, k] == board[j, i])
@@ -391,14 +404,10 @@ namespace _2048
                     if (board[j, k] != board[j, i] && board[j, i] != 0)
                     {
                         k++;
-                        //IsPossible = false;
-
                     }
 
                     else if (board[j, k] == board[j, i])
                     {
-                        //IsPossible = true;
-
                         return true;
                     }
 
@@ -421,15 +430,12 @@ namespace _2048
                     if (board[j, k] != board[j, i] && board[j, i] != 0)
                     {
                         k--;
-                        //IsPossible = false;
-
                     }
 
                     else if (board[j, k] == board[j, i])
                     {
 
                         k--;
-                        //IsPossible = true;
                         return true;
                     }
 
@@ -451,16 +457,11 @@ namespace _2048
                     if (board[k, j] != board[i, j] && board[i, j] != 0)
                     {
                         k++;
-                        //IsPossible = false;
-
                     }
 
                     else if (board[k, j] == board[i, j])
                     {
-
-
                         k++;
-                        //IsPossible = true;
                         return true;
                     }
 
@@ -478,22 +479,16 @@ namespace _2048
 
             for (int j = 0; j < 4; j++)
             {
-
-
                 for (int i = 2, k = 3; i >= 0; i--)
                 {
                     if (board[k, j] != board[i, j] && board[i, j] != 0)
                     {
                         k--;
-                        //IsPossible = false;
-
                     }
-
                     else if (board[k, j] == board[i, j])
                     {
 
                         k--;
-                        //IsPossible = true;
                         return true;
                     }
                 }

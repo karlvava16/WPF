@@ -74,14 +74,14 @@
             <Border Grid.Column="0">
                 <StackPanel HorizontalAlignment="Center">
                     <TextBlock Text="Score" Style="{StaticResource InfoTextBlock}"/>
-                    <TextBlock Text="0" Style="{StaticResource ScoreTextBlock}"/>
+                    <TextBlock Name="Score" Text="0" Style="{StaticResource ScoreTextBlock}"/>
                 </StackPanel>
             </Border>
             
             <Border Grid.Column="1">
                 <StackPanel  HorizontalAlignment="Center">
                     <TextBlock Text="Max Score" Style="{StaticResource InfoTextBlock}"/>
-                    <TextBlock Text="0" Style="{StaticResource ScoreTextBlock}"/>
+                    <TextBlock Name="MaxScore" Text="0" Style="{StaticResource ScoreTextBlock}"/>
                 </StackPanel>
             </Border>
         </Grid>
