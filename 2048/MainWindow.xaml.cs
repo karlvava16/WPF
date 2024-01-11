@@ -14,6 +14,8 @@ namespace _2048
         private int score = 0;
         public int Score { get { return score; } }
 
+        public bool IsPossible { get; set; }
+
 
 
         public MainWindow()
@@ -91,6 +93,28 @@ namespace _2048
             InitializeGame();
         }
 
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            CheckForPossibility();
+
+            // Handle key events (left, right, up, down)
+            switch (e.Key)
+            {
+                case Key.Left:
+                    HandleKeyPress(Key.Left);
+                    break;
+                case Key.Right:
+                    HandleKeyPress(Key.Right);
+                    break;
+                case Key.Up:
+                    HandleKeyPress(Key.Up);
+                    break;
+                case Key.Down:
+                    HandleKeyPress(Key.Down);
+                    break;
+            }
+        }
+
         private void UpdateUI()
         {
 
@@ -164,6 +188,32 @@ namespace _2048
         {
             if (key == Key.Left)
             {
+
+
+                for (int j = 0; j < 4; j++)
+                {
+
+
+                    for (int i = 1, k = 0; i <= 3; i++)
+                    {
+                        if (board[j, k] != board[j, i] && board[j, i] != 0)
+                        {
+                            k++;
+
+                        }
+
+                        else if (board[j, k] == board[j, i])
+                        {
+                            board[j, k] += board[j, i];
+                            board[j, i] = 0;
+                            k++;
+                        }
+
+
+                    }
+                }
+
+
                 for (int j = 0; j < 4; j++)
                 {
                     for (int i = 1, k = 0; i <= 3; i++)
@@ -188,26 +238,29 @@ namespace _2048
                     }
                 }
 
+                
+            }
+
+            else if (key == Key.Right)
+            {
+
                 for (int j = 0; j < 4; j++)
                 {
-                    for (int i = 1, k = 0; i <= 3; i++)
+                    for (int i = 2, k = 3; i >= 0; i--)
                     {
                         if (board[j, k] != board[j, i] && board[j, i] != 0)
                         {
-                            k++;
+                            k--;
                         }
                         else if (board[j, k] == board[j, i])
                         {
                             board[j, k] += board[j, i];
                             board[j, i] = 0;
-                            k++;
+                            k--;
                         }
                     }
                 }
-            }
 
-            else if (key == Key.Right)
-            {
                 for (int j = 0; j < 4; j++)
                 {
                     for (int i = 2, k = 3; i >= 0; i--)
@@ -232,22 +285,7 @@ namespace _2048
                     }
                 }
 
-                for (int j = 0; j < 4; j++)
-                {
-                    for (int i = 2, k = 3; i >= 0; i--)
-                    {
-                        if (board[j, k] != board[j, i] && board[j, i] != 0)
-                        {
-                            k--;
-                        }
-                        else if (board[j, k] == board[j, i])
-                        {
-                            board[j, k] += board[j, i];
-                            board[j, i] = 0;
-                            k--;
-                        }
-                    }
-                }
+               
             }
 
             else if (key == Key.Up)
@@ -256,6 +294,23 @@ namespace _2048
                 {
                     for (int i = 1, k = 0; i <= 3; i++)
                     {
+                        if (board[k, j] != board[i, j] && board[i, j] != 0)
+                        {
+                            k++;
+                        }
+                        else if (board[k, j] == board[i, j])
+                        {
+                            board[k, j] += board[i, j];
+                            board[i, j] = 0;
+                            k++;
+                        }
+                    }
+                }
+
+                for (int j = 0; j < 4; j++)
+                {
+                    for (int i = 1, k = 0; i <= 3; i++)
+                    {
                         if (board[k, j] == 0)
                         {
                             for (int z = k; z < 4; z++)
@@ -276,26 +331,29 @@ namespace _2048
                     }
                 }
 
+                
+            }
+
+            else if (key == Key.Down)
+            {
+
                 for (int j = 0; j < 4; j++)
                 {
-                    for (int i = 1, k = 0; i <= 3; i++)
+                    for (int i = 2, k = 3; i >= 0; i--)
                     {
                         if (board[k, j] != board[i, j] && board[i, j] != 0)
                         {
-                            k++;
+                            k--;
                         }
                         else if (board[k, j] == board[i, j])
                         {
                             board[k, j] += board[i, j];
                             board[i, j] = 0;
-                            k++;
+                            k--;
                         }
                     }
                 }
-            }
 
-            else if (key == Key.Down)
-            {
                 for (int j = 0; j < 4; j++)
                 {
                     for (int i = 2, k = 3; i >= 0; i--)
@@ -320,22 +378,7 @@ namespace _2048
                     }
                 }
 
-                for (int j = 0; j < 4; j++)
-                {
-                    for (int i = 2, k = 3; i >= 0; i--)
-                    {
-                        if (board[k, j] != board[i, j] && board[i, j] != 0)
-                        {
-                            k--;
-                        }
-                        else if (board[k, j] == board[i, j])
-                        {
-                            board[k, j] += board[i, j];
-                            board[i, j] = 0;
-                            k--;
-                        }
-                    }
-                }
+               
             }
 
             // Add a new tile after each move
@@ -345,27 +388,6 @@ namespace _2048
             UpdateUI();
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            CheckForPossibility();
-
-            // Handle key events (left, right, up, down)
-            switch (e.Key)
-            {
-                case Key.Left:
-                    HandleKeyPress(Key.Left);
-                    break;
-                case Key.Right:
-                    HandleKeyPress(Key.Right);
-                    break;
-                case Key.Up:
-                    HandleKeyPress(Key.Up);
-                    break;
-                case Key.Down:
-                    HandleKeyPress(Key.Down);
-                    break;
-            }
-        }
 
         //left
         private bool CanMoveLeft()
@@ -377,10 +399,14 @@ namespace _2048
                     if (board[j, k] != board[j, i] && board[j, i] != 0)
                     {
                         k++;
+                        IsPossible = false;
+
                     }
 
                     else if (board[j, k] == board[j, i])
                     {
+                        IsPossible = true;
+
                         return true;
                     }
 
@@ -403,12 +429,15 @@ namespace _2048
                     if (board[j, k] != board[j, i] && board[j, i] != 0)
                     {
                         k--;
+                        IsPossible = false;
+
                     }
 
                     else if (board[j, k] == board[j, i])
                     {
 
                         k--;
+                        IsPossible = true;
                         return true;
                     }
 
@@ -430,6 +459,8 @@ namespace _2048
                     if (board[k, j] != board[i, j] && board[i, j] != 0)
                     {
                         k++;
+                        IsPossible = false;
+
                     }
 
                     else if (board[k, j] == board[i, j])
@@ -437,6 +468,7 @@ namespace _2048
 
 
                         k++;
+                        IsPossible = true;
                         return true;
                     }
 
@@ -461,6 +493,7 @@ namespace _2048
                     if (board[k, j] != board[i, j] && board[i, j] != 0)
                     {
                         k--;
+                        IsPossible = false;
 
                     }
 
@@ -468,6 +501,7 @@ namespace _2048
                     {
 
                         k--;
+                        IsPossible = true;
                         return true;
                     }
                 }
