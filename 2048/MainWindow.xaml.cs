@@ -14,7 +14,7 @@ namespace _2048
         private int score = 0;
         public int Score { get { return score; } }
 
-        public bool IsPossible { get; set; }
+        //public bool IsPossible { get; set; }
 
 
 
@@ -79,23 +79,13 @@ namespace _2048
 
         private void Restart(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    board[i, j] = 0;
-                    string buttonName = $"Button{i}{j}";
-                    Button button = (Button)FindName(buttonName);
-                    button.Content = "";
-                }
-            }
-
             InitializeGame();
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            CheckForPossibility();
+            if (!CheckForPossibility())
+            {  return; }
 
             // Handle key events (left, right, up, down)
             switch (e.Key)
@@ -113,6 +103,12 @@ namespace _2048
                     HandleKeyPress(Key.Down);
                     break;
             }
+
+            // Add a new tile after each move
+            AddNewTile();
+
+            // Update the UI
+            UpdateUI();
         }
 
         private void UpdateUI()
@@ -168,7 +164,7 @@ namespace _2048
             }
         }
 
-        private void CheckForPossibility()
+        private bool CheckForPossibility()
         {
             if (!CanMoveLeft() && !CanMoveRight() && !CanMoveDown() && !CanMoveUp())
             {
@@ -176,12 +172,14 @@ namespace _2048
                 if (res == MessageBoxResult.OK)
                 {
                     Restart(this, new RoutedEventArgs());
+                    return false;
                 }
                 else
                 {
                     this.Close();
                 }
             }
+            return true;
         }
 
             private void HandleKeyPress(Key key)
@@ -380,12 +378,6 @@ namespace _2048
 
                
             }
-
-            // Add a new tile after each move
-            AddNewTile();
-
-            // Update the UI
-            UpdateUI();
         }
 
 
@@ -399,13 +391,13 @@ namespace _2048
                     if (board[j, k] != board[j, i] && board[j, i] != 0)
                     {
                         k++;
-                        IsPossible = false;
+                        //IsPossible = false;
 
                     }
 
                     else if (board[j, k] == board[j, i])
                     {
-                        IsPossible = true;
+                        //IsPossible = true;
 
                         return true;
                     }
@@ -429,7 +421,7 @@ namespace _2048
                     if (board[j, k] != board[j, i] && board[j, i] != 0)
                     {
                         k--;
-                        IsPossible = false;
+                        //IsPossible = false;
 
                     }
 
@@ -437,7 +429,7 @@ namespace _2048
                     {
 
                         k--;
-                        IsPossible = true;
+                        //IsPossible = true;
                         return true;
                     }
 
@@ -459,7 +451,7 @@ namespace _2048
                     if (board[k, j] != board[i, j] && board[i, j] != 0)
                     {
                         k++;
-                        IsPossible = false;
+                        //IsPossible = false;
 
                     }
 
@@ -468,7 +460,7 @@ namespace _2048
 
 
                         k++;
-                        IsPossible = true;
+                        //IsPossible = true;
                         return true;
                     }
 
@@ -493,7 +485,7 @@ namespace _2048
                     if (board[k, j] != board[i, j] && board[i, j] != 0)
                     {
                         k--;
-                        IsPossible = false;
+                        //IsPossible = false;
 
                     }
 
@@ -501,7 +493,7 @@ namespace _2048
                     {
 
                         k--;
-                        IsPossible = true;
+                        //IsPossible = true;
                         return true;
                     }
                 }
