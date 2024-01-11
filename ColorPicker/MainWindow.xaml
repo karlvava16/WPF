@@ -1,0 +1,126 @@
+﻿<Window x:Class="ColorPicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ColorPicker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:ARGB_ViewModel x:Key="ViewModel"/>
+
+        <Style x:Key="Parts" TargetType="TextBox">
+            <Setter Property="DockPanel.Dock" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+
+        </Style>
+
+        <Style x:Key="Text" BasedOn="{StaticResource Parts}" TargetType="TextBox">
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="Grid.Row" Value="3"/>
+            <Setter Property="Text" Value="Blue"/>
+            <Setter Property="Margin" Value="0 0 5 0"/>
+        </Style>
+
+        <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+            <Setter Property="Margin" Value="5 0 0 0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button IsHitTestVisible="False" x:Name="bt" Grid.Column="3" Grid.RowSpan="4" Margin="5" Background="{Binding ColorARGB}">
+
+
+            </Button>
+            <DockPanel>
+                <CheckBox Style="{StaticResource CheckBoxStyle}" IsChecked="{Binding Check1}"></CheckBox>
+                <TextBox Style="{StaticResource Parts}" Text="{Binding Alpha}"/>
+                <TextBox Style="{StaticResource Text}" Text="Alpha"/>
+
+            </DockPanel>
+            <Slider IsEnabled="{Binding Check1}" Margin="5 0 0 0" Maximum="255" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Name="sl" Value="{Binding Alpha}"></Slider>
+
+            <DockPanel Grid.Row="1">
+                <CheckBox Style="{StaticResource CheckBoxStyle}" IsChecked="{Binding Check2}"></CheckBox>
+                <TextBox Style="{StaticResource Parts}" Text="{Binding Red}"></TextBox>
+                <TextBox Style="{StaticResource Text}" Text="Red"/>
+
+            </DockPanel>
+            <Slider Margin="5 0 0 0" IsEnabled="{Binding Check2}" Maximum="255" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Value="{Binding Red}"></Slider>
+
+            <DockPanel Grid.Row="2">
+                <CheckBox Style="{StaticResource CheckBoxStyle}" IsChecked="{Binding Check3}"></CheckBox>
+                <TextBox Style="{StaticResource Parts}" Text="{Binding Green}"></TextBox>
+                <TextBox Style="{StaticResource Text}" Text="Green"/>
+
+            </DockPanel>
+            <Slider Margin="5 0 0 0" IsEnabled="{Binding Check3}" Maximum="255" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Value="{Binding Green}"></Slider>
+
+            <DockPanel Grid.Row="3">
+                <CheckBox Style="{StaticResource CheckBoxStyle}" IsChecked="{Binding Check4}"></CheckBox>
+                <TextBox Style="{StaticResource Parts}" Text="{Binding Blue}"></TextBox>
+                <TextBox Style="{StaticResource Text}" Text="Blue"/>
+
+            </DockPanel>
+            <Slider Margin="5 0 0 0" IsEnabled="{Binding Check4}" Maximum="255" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Value="{Binding Blue}"></Slider>
+
+            <Button Command="{Binding AddCommand}" Grid.Column="0" Grid.Row="4" Margin="5" HorizontalAlignment="Left" Width="70" >Add
+            </Button>
+
+        </Grid>
+
+        <ListBox  x:Name="ls" ItemsSource="{Binding MyColor}" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}" Grid.Row="1">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox  Grid.Column="0" Height="30" IsReadOnly="True" IsEnabled="False" BorderThickness="0" FontSize="23" Text="{Binding Col}"></TextBox>
+                        <Button IsHitTestVisible="False" Grid.Column="1"  Height="30" Margin="5" Background="{Binding Col}" >
+
+
+                        </Button>
+                        <Button MouseEnter="ListBoxItem_MouseEnter" Command="{Binding Source={StaticResource ViewModel}, Path=DelCommand}"   Grid.Column="2" Height="30" Content="Удалить"  Margin="5"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>
