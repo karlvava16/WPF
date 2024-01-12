@@ -126,7 +126,7 @@ namespace Notebook
             try
             {
                 string json = JsonConvert.SerializeObject(Persons, Formatting.Indented);
-                File.WriteAllText("PersonInformation.json", json);
+                File.WriteAllText("ContactInformation.json", json);
             }
             catch (Exception ex)
             {
@@ -143,7 +143,7 @@ namespace Notebook
         {
             try
             {
-                if (File.Exists("PersonInformation.json"))
+                if (File.Exists("ContactInformation.json"))
                 {
                     string json = File.ReadAllText("PersonInformation.json");
                     ObservableCollection<Model> load = JsonConvert.DeserializeObject<ObservableCollection<Model>>(json);
