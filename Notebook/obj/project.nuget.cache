@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RSaUvVHOQYD8E4BjdIYXqC3Zp6slSeJy/3mBa6V4UD/3JiR/rmp4nO8vPspa8cJzIgLMfmbvkO2QVCVddh2RvA==",
+  "success": true,
+  "projectFilePath": "C:\\Step\\WPF\\Notebook\\Notebook.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vlady\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
