@@ -24,16 +24,16 @@ namespace Resume
     }
     public class MainViewModel : BaseViewModel
     {
-        public ObservableCollection<string> ComboPersons { get; set; }
-        public ObservableCollection<PersonViewModel> ListPersons { get; set; }
+        public ObservableCollection<string> ComboContacts { get; set; }
+        public ObservableCollection<PersonViewModel> ListContacts { get; set; }
         private ObservableCollection<PersonViewModel> temp_list = new ObservableCollection<PersonViewModel>();
         private PersonViewModel current;
         private int combo_index;
         private Commands? add, select, clear, remove, save;
         public MainViewModel()
         {
-            ComboPersons = new ObservableCollection<string>();
-            ListPersons = new ObservableCollection<PersonViewModel>();
+            ComboContacts = new ObservableCollection<string>();
+            ListContacts = new ObservableCollection<PersonViewModel>();
             Current = new PersonViewModel();
             LoadFromFile();
         }
@@ -67,7 +67,7 @@ namespace Resume
                     string json = File.ReadAllText("Resume.json");
                     temp_list = JsonConvert.DeserializeObject<ObservableCollection<PersonViewModel>>(json);
                     json = File.ReadAllText("List.json");
-                    ComboPersons = JsonConvert.DeserializeObject<ObservableCollection<string>>(json);
+                    ComboContacts = JsonConvert.DeserializeObject<ObservableCollection<string>>(json);
                 }
             }
             catch (Exception ex)
@@ -85,7 +85,7 @@ namespace Resume
         }
         private void Add()
         {
-            ComboPersons.Add(Current.ComboText());
+            ComboContacts.Add(Current.ComboText());
             temp_list.Add(Current.Clone());
             Current.Fullname = Current.Age = Current.Family = Current.Address = Current.Email = string.Empty;
             Current.Check1 = Current.Check2 = Current.Check3 = false;
@@ -101,10 +101,10 @@ namespace Resume
         }
         private void Select()
         {
-            ListPersons.Clear();
-            ListPersons.Add(temp_list[ComboIndex]);
+            ListContacts.Clear();
+            ListContacts.Add(temp_list[ComboIndex]);
         }
-        private bool CanSelect() { return ComboPersons.Count > 0; }
+        private bool CanSelect() { return ComboContacts.Count > 0; }
         public ICommand ClearCommand
         {
             get
@@ -113,8 +113,8 @@ namespace Resume
                 return clear;
             }
         }
-        private void Clear() => ListPersons.Clear();
-        private bool CanClear() { return ComboPersons.Count > 0 && ListPersons.Count > 0; }
+        private void Clear() => ListContacts.Clear();
+        private bool CanClear() { return ComboContacts.Count > 0 && ListContacts.Count > 0; }
         public ICommand RemoveCommand
         {
             get
@@ -128,11 +128,11 @@ namespace Resume
             MessageBoxResult res = MessageBox.Show("Вы точно хотите удалить резюме?", "Resume", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (res == MessageBoxResult.Yes)
             {
-                ComboPersons.RemoveAt(ComboIndex);
-                ListPersons.Clear();
+                ComboContacts.RemoveAt(ComboIndex);
+                ListContacts.Clear();
             }
         }
-        private bool CanRemove() { return ComboPersons.Count > 0; }
+        private bool CanRemove() { return ComboContacts.Count > 0; }
         public ICommand SaveCommand
         {
             get
@@ -147,7 +147,7 @@ namespace Resume
             {
                 string json = JsonConvert.SerializeObject(temp_list, Formatting.Indented);
                 File.WriteAllText("Resume.json", json);
-                json = JsonConvert.SerializeObject(ComboPersons, Formatting.Indented);
+                json = JsonConvert.SerializeObject(ComboContacts, Formatting.Indented);
                 File.WriteAllText("List.json", json);
             }
             catch (Exception ex)

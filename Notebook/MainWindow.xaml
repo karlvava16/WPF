@@ -39,7 +39,7 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
-        <ControlTemplate x:Key="ListBoxStyle" TargetType="{x:Type ListBox}">
+        <ControlTemplate x:Key="ListViewStyle" TargetType="{x:Type ListView}">
             <Border x:Name="Border" Background="LightBlue" CornerRadius="6" BorderThickness="1" BorderBrush="LightGray" Margin="5">
                 <Grid>
                     <Rectangle Visibility="Hidden" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
@@ -76,13 +76,13 @@
             <Button Grid.Row="6" Command="{Binding SaveJsonCommand}" Template="{StaticResource ButtTemplate}">SAVE</Button>
             <Button Grid.Row="7" Command="{Binding LoadJsonCommand}" Template="{StaticResource ButtTemplate}">LOAD</Button>
         </Grid>
-        <ListBox Foreground="Black" FontSize="20" Grid.Column="1" x:Name="Listbox1" ItemsSource="{Binding Contacts}" Template="{StaticResource ListBoxStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding SelectedContact, Mode=TwoWay}">
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
+        <ListView Foreground="Black" FontSize="20" Grid.Column="1" x:Name="ListView1" ItemsSource="{Binding Contacts}" Template="{StaticResource ListViewStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding SelectedContact, Mode=TwoWay}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                 </Style>
-            </ListBox.ItemContainerStyle>
-            <ListBox.ItemTemplate>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="DimGray" BorderThickness="1" Margin="5" CornerRadius="5">
                         <StackPanel>
@@ -92,12 +92,12 @@
                         </StackPanel>
                     </Border>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-            <ListBox.ItemsPanel>
+            </ListView.ItemTemplate>
+            <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel />
                 </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-        </ListBox>
+            </ListView.ItemsPanel>
+        </ListView>
     </Grid>
 </Window>

@@ -5,9 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Resume"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Window.Resources>
         <local:MainViewModel x:Key="ViewModel"/>
+        <ControlTemplate x:Key="ButtTemplate" TargetType="{x:Type Button}">
+            <Border TextBlock.Foreground="Black" CornerRadius="5" Background="LightBlue" Name="Border" Margin="5" TextBlock.FontSize="15">
+                <Grid>
+                    <Rectangle Visibility="Hidden" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="Border" Property="Background" Value="Blue"></Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled"  Value="False">
+                    <Setter TargetName="Border" Property="Background" Value="Gray"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="TextBoxTemplate" TargetType="{x:Type TextBox}">
+    <Border x:Name="Border" Background="LightBlue" CornerRadius="6" BorderThickness="1" BorderBrush="LightGray" Margin="5">
+        <Grid>
+            <Rectangle Visibility="Hidden" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+            <ScrollViewer>
+                <TextBox Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}" FontSize="20" Background="Transparent" Foreground="Black" BorderThickness="0" VerticalAlignment="Center"/>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+    <ControlTemplate.Triggers>
+        <Trigger Property="IsMouseOver" Value="True">
+            <Setter TargetName="Border" Property="Background" Value="LightGreen"></Setter>
+        </Trigger>
+    </ControlTemplate.Triggers>
+</ControlTemplate>
+        
     </Window.Resources>
     <Grid DataContext="{StaticResource ViewModel}">
         <Grid.ColumnDefinitions>
@@ -15,80 +47,80 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.225*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.RowSpan="2">
             <Label Content="ФИО:"/>
-            <TextBox  Text="{Binding Current.Fullname}"/>
+            <TextBox  Text="{Binding Current.Fullname}"  Template="{StaticResource TextBoxTemplate}"/>
             <Label Content="Возраст:"/>
-            <TextBox Text="{Binding Current.Age}"/>
+            <TextBox Text="{Binding Current.Age}"  Template="{StaticResource TextBoxTemplate}"/>
             <Label  Content="Семейное положение:"/>
-            <TextBox Text="{Binding Current.Family}"/>
+            <TextBox Text="{Binding Current.Family}"  Template="{StaticResource TextBoxTemplate}"/>
             <Label  Content="Адрес:"/>
-            <TextBox Text="{Binding Current.Address}"/>
+            <TextBox Text="{Binding Current.Address}"  Template="{StaticResource TextBoxTemplate}"/>
             <Label Content="Email:"/>
-            <TextBox Text="{Binding Current.Email}"/>
-        </StackPanel>
-        <StackPanel VerticalAlignment="Center" Grid.Row="2">
+            <TextBox Text="{Binding Current.Email}" Template="{StaticResource TextBoxTemplate}"/>
             <CheckBox IsChecked="{Binding Current.Check1,Mode=TwoWay}" Content="C++"/>
             <CheckBox IsChecked="{Binding Current.Check2,Mode=TwoWay}" Content="Иностранные языки"/>
             <CheckBox IsChecked="{Binding Current.Check3,Mode=TwoWay}" Content="OOP"/>
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Grid.Row="3">
-            <Button Command="{Binding AddCommand}" Content="Добавить"/>
-            <Button Command="{Binding ClearCommand}" Content="Очистить форму"/>
-            <Button Command="{Binding SelectCommand}" Content="Выбрать"/>
-            <Button Command="{Binding RemoveCommand}" Content="Удалить"/>
-            <Button Command="{Binding SaveCommand}" Content="Сохранить в файл"/>
+       
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Grid.Row="2">
+            <Button Command="{Binding AddCommand}" Template="{StaticResource ButtTemplate}" Content="Добавить"/>
+            <Button Command="{Binding ClearCommand}" Template="{StaticResource ButtTemplate}" Content="Очистить форму"/>
+            <Button Command="{Binding SelectCommand}" Template="{StaticResource ButtTemplate}" Content="Выбрать"/>
+            <Button Command="{Binding RemoveCommand}" Template="{StaticResource ButtTemplate}" Content="Удалить"/>
+            <Button Command="{Binding SaveCommand}" Template="{StaticResource ButtTemplate}" Content="Сохранить в файл"/>
         </StackPanel>
-        <ComboBox ItemsSource="{Binding ComboPersons}" SelectedIndex="{Binding ComboIndex,Mode=TwoWay}" Grid.Column="1"/>
-        <ListBox ItemsSource="{Binding ListPersons}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Label Content="ФИО: "/>
-                            <Label Content="Возраст: " Grid.Row="1"/>
-                            <Label Content="Семейное положение: " Grid.Row="2"/>
-                            <Label Content="Адрес: " Grid.Row="3"/>
-                            <Label Content="Email: " Grid.Row="4"/>
-                            <Label Content="C++: " Grid.Row="5"/>
-                            <Label Content="Иностранные языки: " Grid.Row="6"/>
-                            <Label Content="OOP: " Grid.Row="7"/>
-                            <Label Content="{Binding Fullname}" Grid.Column="1"/>
-                            <Label Content="{Binding Age}" Grid.Column="1" Grid.Row="1"/>
-                            <Label Content="{Binding Family}" Grid.Column="1" Grid.Row="2"/>
-                            <Label Content="{Binding Address}" Grid.Column="1" Grid.Row="3"/>
-                            <Label Content="{Binding Email}" Grid.Column="1" Grid.Row="4"/>
-                            <Label Content="{Binding IsCPlusPlus}" Grid.Column="1" Grid.Row="5"/>
-                            <Label Content="{Binding IsLanguage}" Grid.Column="1" Grid.Row="6"/>
-                            <Label Content="{Binding IsOOP}" Grid.Column="1" Grid.Row="7"/>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-        </ListBox>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Grid.Column="1" VerticalAlignment="Stretch">
+            <ComboBox ItemsSource="{Binding ComboContacts}" SelectedIndex="{Binding ComboIndex,Mode=TwoWay}" Grid.Column="1" Height="50"  Grid.Row="0"/>
+            <ListBox ItemsSource="{Binding ListContacts}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Content="ФИО: "/>
+                                <Label Content="Возраст: " Grid.Row="1"/>
+                                <Label Content="Семейное положение: " Grid.Row="2"/>
+                                <Label Content="Адрес: " Grid.Row="3"/>
+                                <Label Content="Email: " Grid.Row="4"/>
+                                <Label Content="C++: " Grid.Row="5"/>
+                                <Label Content="Иностранные языки: " Grid.Row="6"/>
+                                <Label Content="OOP: " Grid.Row="7"/>
+                                <Label Content="{Binding Fullname}" Grid.Column="1"/>
+                                <Label Content="{Binding Age}" Grid.Column="1" Grid.Row="1"/>
+                                <Label Content="{Binding Family}" Grid.Column="1" Grid.Row="2"/>
+                                <Label Content="{Binding Address}" Grid.Column="1" Grid.Row="3"/>
+                                <Label Content="{Binding Email}" Grid.Column="1" Grid.Row="4"/>
+                                <Label Content="{Binding IsCPlusPlus}" Grid.Column="1" Grid.Row="5"/>
+                                <Label Content="{Binding IsLanguage}" Grid.Column="1" Grid.Row="6"/>
+                                <Label Content="{Binding IsOOP}" Grid.Column="1" Grid.Row="7"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Window>
