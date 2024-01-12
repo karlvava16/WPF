@@ -1,0 +1,94 @@
+﻿<Window x:Class="Resume.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resume"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:MainViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.65*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.225*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan="2">
+            <Label Content="ФИО:"/>
+            <TextBox  Text="{Binding Current.Fullname}"/>
+            <Label Content="Возраст:"/>
+            <TextBox Text="{Binding Current.Age}"/>
+            <Label  Content="Семейное положение:"/>
+            <TextBox Text="{Binding Current.Family}"/>
+            <Label  Content="Адрес:"/>
+            <TextBox Text="{Binding Current.Address}"/>
+            <Label Content="Email:"/>
+            <TextBox Text="{Binding Current.Email}"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Grid.Row="2">
+            <CheckBox IsChecked="{Binding Current.Check1,Mode=TwoWay}" Content="C++"/>
+            <CheckBox IsChecked="{Binding Current.Check2,Mode=TwoWay}" Content="Иностранные языки"/>
+            <CheckBox IsChecked="{Binding Current.Check3,Mode=TwoWay}" Content="OOP"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Grid.Row="3">
+            <Button Command="{Binding AddCommand}" Content="Добавить"/>
+            <Button Command="{Binding ClearCommand}" Content="Очистить форму"/>
+            <Button Command="{Binding SelectCommand}" Content="Выбрать"/>
+            <Button Command="{Binding RemoveCommand}" Content="Удалить"/>
+            <Button Command="{Binding SaveCommand}" Content="Сохранить в файл"/>
+        </StackPanel>
+        <ComboBox ItemsSource="{Binding ComboPersons}" SelectedIndex="{Binding ComboIndex,Mode=TwoWay}" Grid.Column="1"/>
+        <ListBox ItemsSource="{Binding ListPersons}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Content="ФИО: "/>
+                            <Label Content="Возраст: " Grid.Row="1"/>
+                            <Label Content="Семейное положение: " Grid.Row="2"/>
+                            <Label Content="Адрес: " Grid.Row="3"/>
+                            <Label Content="Email: " Grid.Row="4"/>
+                            <Label Content="C++: " Grid.Row="5"/>
+                            <Label Content="Иностранные языки: " Grid.Row="6"/>
+                            <Label Content="OOP: " Grid.Row="7"/>
+                            <Label Content="{Binding Fullname}" Grid.Column="1"/>
+                            <Label Content="{Binding Age}" Grid.Column="1" Grid.Row="1"/>
+                            <Label Content="{Binding Family}" Grid.Column="1" Grid.Row="2"/>
+                            <Label Content="{Binding Address}" Grid.Column="1" Grid.Row="3"/>
+                            <Label Content="{Binding Email}" Grid.Column="1" Grid.Row="4"/>
+                            <Label Content="{Binding IsCPlusPlus}" Grid.Column="1" Grid.Row="5"/>
+                            <Label Content="{Binding IsLanguage}" Grid.Column="1" Grid.Row="6"/>
+                            <Label Content="{Binding IsOOP}" Grid.Column="1" Grid.Row="7"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</Window>
