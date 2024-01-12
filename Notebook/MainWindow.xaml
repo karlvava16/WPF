@@ -76,7 +76,7 @@
             <Button Grid.Row="6" Command="{Binding SaveJsonCommand}" Template="{StaticResource ButtTemplate}">SAVE</Button>
             <Button Grid.Row="7" Command="{Binding LoadJsonCommand}" Template="{StaticResource ButtTemplate}">LOAD</Button>
         </Grid>
-        <ListBox Foreground="Black" Grid.Column="1" x:Name="Listbox1" ItemsSource="{Binding Persons}" Template="{StaticResource ListBoxStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding SelectedPerson, Mode=TwoWay}">
+        <ListBox Foreground="Black" FontSize="20" Grid.Column="1" x:Name="Listbox1" ItemsSource="{Binding Contacts}" Template="{StaticResource ListBoxStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding SelectedContact, Mode=TwoWay}">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -86,9 +86,9 @@
                 <DataTemplate>
                     <Border BorderBrush="DimGray" BorderThickness="1" Margin="5" CornerRadius="5">
                         <StackPanel>
-                            <TextBlock Text="{Binding FullName}" FontSize="15" Foreground="White"/>
-                            <TextBlock Text="{Binding Address}" FontSize="15" Foreground="White"/>
-                            <TextBlock Text="{Binding Phone}" FontSize="15" Foreground="White"/>
+                            <TextBlock Text="{Binding FullName}"/>
+                            <TextBlock Text="{Binding Address}"/>
+                            <TextBlock Text="{Binding Phone}" />
                         </StackPanel>
                     </Border>
                 </DataTemplate>

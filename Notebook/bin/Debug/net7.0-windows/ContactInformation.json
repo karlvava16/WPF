@@ -1,0 +1,72 @@
+[
+  {
+    "FullName": "sdfsdaf",
+    "Address": "sadfsdfsd",
+    "Phone": "sadfsadfsda",
+    "DependencyObjectType": {
+      "Id": 115,
+      "SystemType": "Notebook.Model, Notebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "BaseType": {
+        "Id": 0,
+        "SystemType": "System.Windows.DependencyObject, WindowsBase, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+        "BaseType": null,
+        "Name": "DependencyObject"
+      },
+      "Name": "Model"
+    },
+    "IsSealed": false,
+    "Dispatcher": {
+      "Thread": {
+        "ManagedThreadId": 1,
+        "IsAlive": true,
+        "IsBackground": false,
+        "IsThreadPoolThread": false,
+        "Priority": 2,
+        "ThreadState": 0,
+        "CurrentCulture": "en-US",
+        "CurrentUICulture": "en-US",
+        "ExecutionContext": {},
+        "Name": null,
+        "ApartmentState": 0
+      },
+      "HasShutdownStarted": false,
+      "HasShutdownFinished": false,
+      "Hooks": {}
+    }
+  },
+  {
+    "FullName": "sadfsdafsda",
+    "Address": "sdfasfsdasdf",
+    "Phone": "sdfsdafsdafsdf",
+    "DependencyObjectType": {
+      "Id": 115,
+      "SystemType": "Notebook.Model, Notebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "BaseType": {
+        "Id": 0,
+        "SystemType": "System.Windows.DependencyObject, WindowsBase, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+        "BaseType": null,
+        "Name": "DependencyObject"
+      },
+      "Name": "Model"
+    },
+    "IsSealed": false,
+    "Dispatcher": {
+      "Thread": {
+        "ManagedThreadId": 1,
+        "IsAlive": true,
+        "IsBackground": false,
+        "IsThreadPoolThread": false,
+        "Priority": 2,
+        "ThreadState": 0,
+        "CurrentCulture": "en-US",
+        "CurrentUICulture": "en-US",
+        "ExecutionContext": {},
+        "Name": null,
+        "ApartmentState": 0
+      },
+      "HasShutdownStarted": false,
+      "HasShutdownFinished": false,
+      "Hooks": {}
+    }
+  }
+]

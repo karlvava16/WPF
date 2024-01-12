@@ -15,31 +15,31 @@ namespace Notebook
 {
     public class WindowViewModel : DependencyObject
     {
-        private static readonly DependencyProperty PersonsProperty;
-        private static readonly DependencyProperty SelectedPersonProperty;
+        private static readonly DependencyProperty ContactsProperty;
+        private static readonly DependencyProperty SelectedContactProperty;
         private static readonly DependencyProperty InformationFullNameProperty;
         private static readonly DependencyProperty InformationAddressProperty;
         private static readonly DependencyProperty InformationPhoneProperty;
 
         static WindowViewModel()
         {
-            PersonsProperty = DependencyProperty.Register("Persons", typeof(ObservableCollection<Model>), typeof(WindowViewModel));
-            SelectedPersonProperty = DependencyProperty.Register("SelectedPerson", typeof(Model), typeof(WindowViewModel));
+            ContactsProperty = DependencyProperty.Register("Contacts", typeof(ObservableCollection<Model>), typeof(WindowViewModel));
+            SelectedContactProperty = DependencyProperty.Register("SelectedContact", typeof(Model), typeof(WindowViewModel));
             InformationFullNameProperty = DependencyProperty.Register("InformationFullName", typeof(string), typeof(WindowViewModel));
             InformationAddressProperty = DependencyProperty.Register("InformationAddress", typeof(string), typeof(WindowViewModel));
             InformationPhoneProperty = DependencyProperty.Register("InformationPhone", typeof(string), typeof(WindowViewModel));
         }
 
-        public ObservableCollection<Model> Persons
+        public ObservableCollection<Model> Contacts
         {
-            get { return (ObservableCollection<Model>)GetValue(PersonsProperty); }
-            set { SetValue(PersonsProperty, value); }
+            get { return (ObservableCollection<Model>)GetValue(ContactsProperty); }
+            set { SetValue(ContactsProperty, value); }
         }
 
-        public Model SelectedPerson
+        public Model SelectedContact
         {
-            get { return (Model)GetValue(SelectedPersonProperty); }
-            set { SetValue(SelectedPersonProperty, value); }
+            get { return (Model)GetValue(SelectedContactProperty); }
+            set { SetValue(SelectedContactProperty, value); }
         }
 
         public string InformationFullName
@@ -68,7 +68,7 @@ namespace Notebook
 
         public WindowViewModel()
         {
-            Persons = new ObservableCollection<Model>();
+            Contacts = new ObservableCollection<Model>();
             AddCommand = new DelegateCommand(param => Add(), param => CanAdd());
             EditCommand = new DelegateCommand(param => Edit(), param => CanEdit());
             DeleteCommand = new DelegateCommand(param => Delete(), param => CanDelete());
@@ -78,7 +78,7 @@ namespace Notebook
 
         private void Add()
         {
-            Persons.Add(new Model { FullName = InformationFullName, Address = InformationAddress, Phone = InformationPhone });
+            Contacts.Add(new Model { FullName = InformationFullName, Address = InformationAddress, Phone = InformationPhone });
             InformationFullName = string.Empty;
             InformationAddress = string.Empty;
             InformationPhone = string.Empty;
@@ -91,11 +91,11 @@ namespace Notebook
 
         private void Edit()
         {
-            if (SelectedPerson != null)
+            if (SelectedContact != null)
             {
-                SelectedPerson.FullName = InformationFullName;
-                SelectedPerson.Address = InformationAddress;
-                SelectedPerson.Phone = InformationPhone;
+                SelectedContact.FullName = InformationFullName;
+                SelectedContact.Address = InformationAddress;
+                SelectedContact.Phone = InformationPhone;
                 InformationFullName = string.Empty;
                 InformationAddress = string.Empty;
                 InformationPhone = string.Empty;
@@ -104,28 +104,28 @@ namespace Notebook
 
         private bool CanEdit()
         {
-            return SelectedPerson != null && CanAdd();
+            return SelectedContact != null && CanAdd();
         }
 
         private void Delete()
         {
-            if (SelectedPerson != null)
+            if (SelectedContact != null)
             {
-                Persons.Remove(SelectedPerson);
-                SelectedPerson = null;
+                Contacts.Remove(SelectedContact);
+                SelectedContact = null;
             }
         }
 
         private bool CanDelete()
         {
-            return SelectedPerson != null;
+            return SelectedContact != null;
         }
 
         private void SaveJson()
         {
             try
             {
-                string json = JsonConvert.SerializeObject(Persons, Formatting.Indented);
+                string json = JsonConvert.SerializeObject(Contacts, Formatting.Indented);
                 File.WriteAllText("ContactInformation.json", json);
             }
             catch (Exception ex)
@@ -136,7 +136,7 @@ namespace Notebook
 
         private bool CanSaveJson()
         {
-            return Persons.Count > 0;
+            return Contacts.Count > 0;
         }
 
         private void LoadJson()
@@ -145,12 +145,12 @@ namespace Notebook
             {
                 if (File.Exists("ContactInformation.json"))
                 {
-                    string json = File.ReadAllText("PersonInformation.json");
+                    string json = File.ReadAllText("ContactInformation.json");
                     ObservableCollection<Model> load = JsonConvert.DeserializeObject<ObservableCollection<Model>>(json);
-                    Persons.Clear();
+                    Contacts.Clear();
                     foreach (var i in load)
                     {
-                        Persons.Add(i);
+                        Contacts.Add(i);
                     }
                 }
             }
